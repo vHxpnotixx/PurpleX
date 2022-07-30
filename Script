@@ -16,6 +16,8 @@ btn1.AnchorPoint = Vector2.new(0,1)
 btn1.Position = UDim2.new(0, 75, 1, 0)
 btn1.Size = UDim2.new(0.035, 0, 0.025, 0)
 btn1.Text = "AntiLogs"
+btn1.BackgroundColor3 = Color3.new(0, 0, 0)
+btn1.TextColor3 = Color3.new(255, 255, 255)
 btn1.MouseButton1Click:Connect(function()
     local LP = game:GetService('Players').LocalPlayer
     local PlayerScripts = LP ~= nil and LP:FindFirstChild('PlayerScripts') or nil
@@ -50,6 +52,8 @@ btn2.AnchorPoint = Vector2.new(0,1)
 btn2.Position = UDim2.new(0, 75, 0.975, 0)
 btn2.Size = UDim2.new(0.035, 0, 0.025, 0)
 btn2.Text = "FaneX"
+btn2.BackgroundColor3 = Color3.new(0, 0, 0)
+btn2.TextColor3 = Color3.new(255, 255, 255)
 btn2.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://fane-x.xyz/scripts/v1/", true))()
 end)
@@ -59,6 +63,8 @@ btn3.AnchorPoint = Vector2.new(0,1)
 btn3.Position = UDim2.new(0, 75, 0.95, 0)
 btn3.Size = UDim2.new(0.035, 0, 0.025, 0)
 btn3.Text = "Stats"
+btn3.BackgroundColor3 = Color3.new(0, 0, 0)
+btn3.TextColor3 = Color3.new(255, 255, 255)
 btn3.MouseButton1Click:Connect(function()
     while wait(0.05) do
         game.Players.LocalPlayer.leaderstats.Status.Value = "Supervillain"
@@ -74,6 +80,8 @@ btn4.AnchorPoint = Vector2.new(0,1)
 btn4.Position = UDim2.new(0, 150, 1, 0)
 btn4.Size = UDim2.new(0.035, 0, 0.025, 0)
 btn4.Text = "ForceField"
+btn4.BackgroundColor3 = Color3.new(0, 0, 0)
+btn4.TextColor3 = Color3.new(255, 255, 255)
 btn4.MouseButton1Click:Connect(function()
     while (true) do
     wait(0.2)
@@ -89,6 +97,8 @@ btn5.AnchorPoint = Vector2.new(0,1)
 btn5.Position = UDim2.new(0, 150, 0.975, 0)
 btn5.Size = UDim2.new(0.035, 0, 0.025, 0)
 btn5.Text = "BlackHub"
+btn5.BackgroundColor3 = Color3.new(0, 0, 0)
+btn5.TextColor3 = Color3.new(255, 255, 255)
 btn5.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://pastebin.com/raw/CLgw8MSe", true))()
 end)
@@ -98,6 +108,8 @@ btn6.AnchorPoint = Vector2.new(0,1)
 btn6.Position = UDim2.new(0, 150, 0.95, 0)
 btn6.Size = UDim2.new(0.035, 0, 0.025, 0)
 btn6.Text = "CMD-X"
+btn6.BackgroundColor3 = Color3.new(0, 0, 0)
+btn6.TextColor3 = Color3.new(255, 255, 255)
 btn6.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
 end)
@@ -107,6 +119,8 @@ btn7.AnchorPoint = Vector2.new(0,1)
 btn7.Position = UDim2.new(0, 225, 1, 0)
 btn7.Size = UDim2.new(0.035, 0, 0.025, 0)
 btn7.Text = "Godmode"
+btn7.BackgroundColor3 = Color3.new(0, 0, 0)
+btn7.TextColor3 = Color3.new(255, 255, 255)
 btn7.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/1ArcX/Scripts/main/God%20Mode", true))()
 end)
@@ -116,6 +130,8 @@ btn8.AnchorPoint = Vector2.new(0,1)
 btn8.Position = UDim2.new(0, 225, 0.975, 0)
 btn8.Size = UDim2.new(0.035, 0, 0.025, 0)
 btn8.Text = "StringHub"
+btn8.BackgroundColor3 = Color3.new(0, 0, 0)
+btn8.TextColor3 = Color3.new(255, 255, 255)
 btn8.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://string-hub.netlify.app/", true))()
 end)
@@ -125,39 +141,47 @@ btn9.AnchorPoint = Vector2.new(0,1)
 btn9.Position = UDim2.new(0, 225, 0.95, 0)
 btn9.Size = UDim2.new(0.035, 0, 0.025, 0)
 btn9.Text = "Teleport"
+btn9.BackgroundColor3 = Color3.new(0, 0, 0)
+btn9.TextColor3 = Color3.new(255, 255, 255)
 btn9.MouseButton1Click:Connect(function()
     local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
     local p2 = "DesiredVisa"
     p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
 end)
 
-local btn12 = Instance.new("TextButton", gui)
-btn12.AnchorPoint = Vector2.new(0,1)
-btn12.Position = UDim2.new(0, 300, 1, 0)
-btn12.Size = UDim2.new(0.035, 0, 0.025, 0)
-btn12.Text = "Commands"
-btn12.MouseButton1Click:Connect(function()
+local btn10 = Instance.new("TextButton", gui)
+btn10.AnchorPoint = Vector2.new(0,1)
+btn10.Position = UDim2.new(0, 300, 1, 0)
+btn10.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn10.Text = "Commands"
+btn10.BackgroundColor3 = Color3.new(0, 0, 0)
+btn10.TextColor3 = Color3.new(255, 255, 255)
+btn10.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/vHxpnotixx/SPTSCommands/main/SPTSCommands", true))()
 end)
 
-local btn13 = Instance.new("TextButton", gui)
-btn13.AnchorPoint = Vector2.new(0,1)
-btn13.Position = UDim2.new(0, 300, 0.975, 0)
-btn13.Size = UDim2.new(0.035, 0, 0.025, 0)
-btn13.Text = "Rejoin"
-btn13.MouseButton1Click:Connect(function()
+local btn11 = Instance.new("TextButton", gui)
+btn11.AnchorPoint = Vector2.new(0,1)
+btn11.Position = UDim2.new(0, 300, 0.975, 0)
+btn11.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn11.Text = "Rejoin"
+btn11.BackgroundColor3 = Color3.new(0, 0, 0)
+btn11.TextColor3 = Color3.new(255, 255, 255)
+btn11.MouseButton1Click:Connect(function()
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
 
     ts:Teleport(game.PlaceId, p)
 end)
 
-local btn13 = Instance.new("TextButton", gui)
-btn13.AnchorPoint = Vector2.new(0,1)
-btn13.Position = UDim2.new(0, 300, 0.95, 0)
-btn13.Size = UDim2.new(0.035, 0, 0.025, 0)
-btn13.Text = "Spawn"
-btn13.MouseButton1Click:Connect(function()
+local btn12 = Instance.new("TextButton", gui)
+btn12.AnchorPoint = Vector2.new(0,1)
+btn12.Position = UDim2.new(0, 300, 0.95, 0)
+btn12.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn12.Text = "Spawn"
+btn12.BackgroundColor3 = Color3.new(0, 0, 0)
+btn12.TextColor3 = Color3.new(255, 255, 255)
+btn12.MouseButton1Click:Connect(function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(319,250, 864)
 end)
 
