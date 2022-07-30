@@ -1,0 +1,166 @@
+
+-- Made by Nick and Andrew --
+
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+if game.PlaceId ~= 2202352383 then return end
+
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("GUIlol") then game.Players.LocalPlayer.PlayerGui:FindFirstChild("GUIlol"):Destroy() end
+local gui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
+gui.Name = "GUIlol"
+gui.ResetOnSpawn = false
+gui.DisplayOrder = 1
+local btn1 = Instance.new("TextButton", gui)
+btn1.AnchorPoint = Vector2.new(0,1)
+btn1.Position = UDim2.new(0, 75, 1, 0)
+btn1.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn1.Text = "AntiLogs"
+btn1.MouseButton1Click:Connect(function()
+    local LP = game:GetService('Players').LocalPlayer
+    local PlayerScripts = LP ~= nil and LP:FindFirstChild('PlayerScripts') or nil
+    local ChatScript = PlayerScripts ~= nil and PlayerScripts:FindFirstChild('ChatScript') or nil
+    local ChatMain = ChatScript ~= nil and ChatScript:FindFirstChild('ChatMain') or nil
+
+    if LP and ChatMain ~= nil then
+     local Old, Chatted, OldChatted = nil, Instance.new('BindableEvent'), LP.Chatted; Chatted.Name = LP.Name..'_Chatted_Event'
+     Old = hookmetamethod(game, '__index', newcclosure(function(self, Index)
+           if checkcaller() and self == LP and Index == 'Chatted' then
+             return Chatted.Event
+          elseif not checkcaller() and self == LP and Index == 'Chatted' then
+            return OldChatted
+           end
+   
+           return Old(self, Index)
+     end))
+   
+    local Old2, MessagePosted = nil, require(ChatMain).MessagePosted
+    if MessagePosted then
+        Old2 = hookfunction(MessagePosted.fire, function(self, ...)
+            if not checkcaller() then
+                return Chatted:Fire(...)
+            end
+        end)
+    end
+end
+end)
+
+local btn2 = Instance.new("TextButton", gui)
+btn2.AnchorPoint = Vector2.new(0,1)
+btn2.Position = UDim2.new(0, 75, 0.975, 0)
+btn2.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn2.Text = "FaneX"
+btn2.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://fane-x.xyz/scripts/v1/", true))()
+end)
+
+local btn3 = Instance.new("TextButton", gui)
+btn3.AnchorPoint = Vector2.new(0,1)
+btn3.Position = UDim2.new(0, 75, 0.95, 0)
+btn3.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn3.Text = "Stats"
+btn3.MouseButton1Click:Connect(function()
+    while wait(0.05) do
+        game.Players.LocalPlayer.leaderstats.Status.Value = "Supervillain"
+        game.Players.LocalPlayer.PrivateStats.Reputation.Value = -571853
+        game.Players.LocalPlayer.PrivateStats.InnocentKilled.Value = 271853
+        game.Players.LocalPlayer.PrivateStats.HeroKilled.Value = 78642
+        game.Players.LocalPlayer.PrivateStats.VillainKilled.Value = 45867
+    end
+end)
+
+local btn4 = Instance.new("TextButton", gui)
+btn4.AnchorPoint = Vector2.new(0,1)
+btn4.Position = UDim2.new(0, 150, 1, 0)
+btn4.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn4.Text = "ForceField"
+btn4.MouseButton1Click:Connect(function()
+    while (true) do
+    wait(0.2)
+    for _,v in pairs(game:GetService("Players").LocalPlayer.Character:GetChildren()) do
+    if v.Name == ("ForceField") then v:Destroy()
+    end
+    end
+    end
+end)
+
+local btn5 = Instance.new("TextButton", gui)
+btn5.AnchorPoint = Vector2.new(0,1)
+btn5.Position = UDim2.new(0, 150, 0.975, 0)
+btn5.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn5.Text = "BlackHub"
+btn5.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/CLgw8MSe", true))()
+end)
+
+local btn6 = Instance.new("TextButton", gui)
+btn6.AnchorPoint = Vector2.new(0,1)
+btn6.Position = UDim2.new(0, 150, 0.95, 0)
+btn6.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn6.Text = "CMD-X"
+btn6.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+
+local btn7 = Instance.new("TextButton", gui)
+btn7.AnchorPoint = Vector2.new(0,1)
+btn7.Position = UDim2.new(0, 225, 1, 0)
+btn7.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn7.Text = "Godmode"
+btn7.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/1ArcX/Scripts/main/God%20Mode", true))()
+end)
+
+local btn8 = Instance.new("TextButton", gui)
+btn8.AnchorPoint = Vector2.new(0,1)
+btn8.Position = UDim2.new(0, 225, 0.975, 0)
+btn8.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn8.Text = "StringHub"
+btn8.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://string-hub.netlify.app/", true))()
+end)
+
+local btn9 = Instance.new("TextButton", gui)
+btn9.AnchorPoint = Vector2.new(0,1)
+btn9.Position = UDim2.new(0, 225, 0.95, 0)
+btn9.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn9.Text = "Teleport"
+btn9.MouseButton1Click:Connect(function()
+    local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+    local p2 = "DesiredVisa"
+    p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+end)
+
+local btn12 = Instance.new("TextButton", gui)
+btn12.AnchorPoint = Vector2.new(0,1)
+btn12.Position = UDim2.new(0, 300, 1, 0)
+btn12.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn12.Text = "Commands"
+btn12.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vHxpnotixx/SPTSCommands/main/SPTSCommands", true))()
+end)
+
+local btn13 = Instance.new("TextButton", gui)
+btn13.AnchorPoint = Vector2.new(0,1)
+btn13.Position = UDim2.new(0, 300, 0.975, 0)
+btn13.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn13.Text = "Rejoin"
+btn13.MouseButton1Click:Connect(function()
+    local ts = game:GetService("TeleportService")
+    local p = game:GetService("Players").LocalPlayer
+
+    ts:Teleport(game.PlaceId, p)
+end)
+
+local btn13 = Instance.new("TextButton", gui)
+btn13.AnchorPoint = Vector2.new(0,1)
+btn13.Position = UDim2.new(0, 300, 0.95, 0)
+btn13.Size = UDim2.new(0.035, 0, 0.025, 0)
+btn13.Text = "Spawn"
+btn13.MouseButton1Click:Connect(function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(319,250, 864)
+end)
+
+
+-- Made by Nick and Andrew --
+
