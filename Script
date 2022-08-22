@@ -149,7 +149,7 @@ btn8.TextColor3 = Color3.new(0, 0, 0)
 btn8.BorderSizePixel = 1
 btn8.BorderColor3 = Color3.fromRGB(0, 0, 0)
 btn8.BorderSizePixel = 1
-btn8.BorderColor3 = Color3.fromRGB(128, 89, 244)
+btn8.BorderColor3 = Color3.fromRGB(0, 0, 0)
 btn8.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://string-hub.netlify.app/", true))()
 end)
